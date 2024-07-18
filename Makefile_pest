@@ -1,0 +1,50 @@
+
+pest:
+	make cppp && \
+	make -f pest.mak all && \
+	make clean && \
+	make -f ppest.mak all && \
+	make clean && \
+	make -f pestutl1.mak all && \
+	make clean && \
+	make -f pestutl2.mak all && \
+	make clean && \
+	make -f pestutl3.mak all && \
+	make clean && \
+	make -f pestutl4.mak all && \
+	make clean && \
+	make -f pestutl5.mak all && \
+	make clean && \
+	make -f pestutl6.mak all && \
+	make clean && \
+	make -f pestutl7.mak all && \
+	make clean && \
+	make -f sensan.mak all && \
+	make clean && \
+	make -f beopest.mak all && \
+	make clean && \
+	make install
+	
+pest_hp:
+	make -f pest_hp.mak cppp &&\
+	make -f pest_hp.mak clean  &&\
+	make -f pest_hp.mak pest_hp  &&\
+	make -f pest_hp.mak clean  &&\
+	make -f pest_hp.mak pwhisp_hp  &&\
+	make -f pest_hp.mak clean  &&\
+	make -f pest_hp.mak pcost_hp  &&\
+	make -f pest_hp.mak clean  &&\
+	#make -f cmaes_hp.mak cmaes_hp  &&\
+	#make -f pest_hp.mak clean  &&\
+	make -f jactest_hp.mak jactest_hp  &&\
+	make -f pest_hp.mak clean  &&\
+	make -f rsi_hp.mak rsi_hp  &&\
+	make -f pest_hp.mak clean  &&\
+	make -f ensi_hp.mak ensiprep  &&\
+	make -f ensi_hp.mak ensimod  &&\
+	make -f ensi_hp.mak postensiunc  &&\
+	make -f pest_hp.mak clean  &&\
+	make -f agent_hp.mak agent_hp  &&\
+	make -f pest_hp.mak clean
+
+.PHONY:	pest pest_hp
