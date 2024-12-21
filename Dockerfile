@@ -54,6 +54,7 @@ LABEL company="eki environment and water, inc"
 
 RUN useradd -ms /bin/bash -G sudo eki 
 
+
 ENV HOME="/home/eki"
 WORKDIR ${HOME}
 
@@ -63,6 +64,8 @@ COPY --from=build ${HOME}/bin ${HOME}/bin
 COPY conda_reqs.txt .
 RUN conda install -y -c conda-forge --file conda_reqs.txt && conda clean -ayq
 RUN get-modflow :python
+
+USER eki
 
 ENV PATH=$PATH:${HOME}/bin
 
